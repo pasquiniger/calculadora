@@ -1,0 +1,140 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr );
+    grid-template-rows: repeat(5, minmax(100px,160px));
+    gap: 5px;
+    grid-template-areas: "pantalla pantalla pantalla pantalla pantalla"
+                        "uno dos tres atras borrar"
+                        "cuatro cinco seis prod div"
+                        "siete ocho nueve mas menos"
+                        "cero punto igual igual igual";
+}
+
+
+.btn input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    font-size: 2.5em;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.numero input{
+    background: #ccc;
+    border: none;
+}
+
+.numero input:active{
+    background: #aaa;
+}
+
+.monitor{
+    width: 100%;
+    grid-column: 1/6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: pantalla;
+}
+
+.monitor input{
+    width: 100%;
+    height: 75%;
+    font-size: 4em;
+    font-family: 'Roboto';
+    font-weight: 700;
+}
+
+.monitor input::placeholder{
+    text-align: center;
+    font-size: .75em;
+    font-family: 'Roboto';
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.igual{
+    grid-area: igual;
+}
+
+.igual input{
+    background: #4c5;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.igual input:active{
+    background: #182;
+}
+
+.atras{
+    grid-area: atras;
+}
+
+.atras input{
+    background-color: #ccc;
+}
+
+.atras input:active{
+    background-color: #aaa;
+
+}
+
+.operador input{
+    background-color: #99c;
+    color: #fff;
+}
+
+.operador input:active{
+    background-color: #66b;
+}
+
+.punto{
+    grid-area: punto;
+}
+
+.punto input:active{
+    background-color: #aaa;
+}
+
+.borrar{
+    grid-area: borrar;
+}
+
+.borrar input{
+    background-color:  rgb(238, 55, 55);
+    color: #fff;
+}
+
+.borrar input:active{
+    background-color: #911;
+}
+
+.suma{
+    grid-area: mas;
+}
+
+.resta{
+    grid-area: menos;
+}
+
+.prod{
+    grid-area: prod;
+}
+
+.divid{
+    grid-area: div;
+}
